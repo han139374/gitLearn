@@ -1,0 +1,39 @@
+1.git仓库创建
+  git init --bare han.git
+
+2.本地创建仓库
+  git init han.git
+
+3.从远程拉取仓库
+   git clone git@IP地址:/home/git/han.git
+   或者
+   git init
+   git remote add origin git@IP地址:/home/git/han.git
+   git pull origin master
+
+4.删除本地仓库
+  直接删除文件夹
+
+5.移除绑定的远程仓库
+  git remote rm origin
+
+6.比较本地分支
+  git diff  master test
+
+7.合并本地分支test到master
+  git checkout master         --先切换到master分支
+  git merge test                  -- 将test分支合并到master
+8.删除本地分支test
+  git branch -d test
+
+9.推送本地分支到远程
+  git push origin master    --本地的master合并到远程的master
+  git push origin test         --本地的test合并到远程test分支
+
+10.将远程的test分支和远程的master分支比较
+   git diff  remote origin/master origin/test
+
+11.删除远程的test分支
+   git push origin --delete test
+
+
