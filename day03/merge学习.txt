@@ -1,1 +1,12 @@
 昨天晚上想到了git的merge，今天想试试
+
+昨天的场景测试过了:
+	在家里的电脑，新增文件，推到github上
+	然后早上来到公司，新增文件
+    这个时候，github上和电脑本地是有不同的地方，所以需要merge
+    但需要先把远程代码同步到本地（相当于是远程合并到本地），然后本地推到远程
+所以，最终操作是:
+    git pull origin master  -- pull = fetch + merge
+    （这个时候会提示让输入备注，其实就是merge时候写的注释，类似于commit的注释）
+    git push origin master
+
